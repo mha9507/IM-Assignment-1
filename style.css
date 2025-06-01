@@ -1,0 +1,297 @@
+/* Body - Dreamy Pink Gradient (Like watercolors) */
+body {
+  padding-top: 120px; /* Adjust if your navbar height changes */
+
+  background: linear-gradient(-45deg, #fff0f5, #ffd6e8, #ffc0cb, #ffb6c1);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  font-family: 'Montserrat', cursive;
+  font-size: 22px;
+  color: #5a2a40;
+  margin: 0;
+  min-height: 100vh;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Heading - Handwritten Feel */
+h1 {
+  color: #d44d7d;
+  text-align: center;
+  font-weight: 700;
+  font-size: 3rem;
+  letter-spacing: -1px;
+  margin: 15px 0 10px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+  font-style: italic;
+}
+
+/* Navbar - Paint Stroke Effect */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  border-bottom: 2px dashed #ff9ebb;
+  z-index: 1000;
+}
+
+
+.navbar button {
+  background: #ff6b9d;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  margin: 0 10px;
+  font-size: 18px;
+  font-family: 'Montserrat', cursive;
+  border-radius: 50px 5px 50px 5px;
+  cursor: pointer;
+  transition: all 0.4s;
+  box-shadow: 
+    0 4px 8px rgba(210, 65, 123, 0.3),
+    inset 0 2px 2px rgba(255,255,255,0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.navbar button:hover {
+  background: #d44d7d;
+  transform: rotate(-3deg) scale(1.05);
+  box-shadow: 
+    0 6px 12px rgba(210, 65, 123, 0.4),
+    inset 0 3px 5px rgba(255,255,255,0.3);
+}
+
+.navbar button::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="%23ffffff22"><circle cx="20" cy="20" r="8"/><circle cx="70" cy="30" r="12"/><circle cx="40" cy="70" r="10"/></svg>');
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.navbar button:hover::after {
+  opacity: 1;
+}
+
+/* Images - Polaroid-Style Frames */
+img {
+  max-width: 50%;
+  height: auto;
+  display: block;
+  margin: 40px auto;
+  background: white;
+  padding: 15px 15px 60px 15px;
+  box-shadow: 
+    0 10px 25px rgba(0,0,0,0.1),
+    0 0 0 8px #fff,
+    0 0 0 11px #ff9ebb,
+    0 0 0 13px #fff;
+  transform: rotate(2deg);
+  transition: transform 0.5s;
+}
+
+img:hover {
+  transform: rotate(-1deg) scale(1.02);
+}
+
+/* Custom Underline - Paint Stroke */
+h1::after {
+  content: "";
+  display: block;
+  width: 150px;
+  height: 8px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns=...>');
+  margin: 3px auto 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+
+/* Floating Hearts (Decorative) */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="%23ff9ebb22"><path d="M50,30 Q60,20 70,30 Q80,40 50,60 Q20,40 30,30 Q40,20 50,30 Z"/></svg>');
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Gallery Container - Artistic Frame */
+.art-gallery {
+  position: relative;
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  box-shadow: 
+    0 10px 30px rgba(0, 0, 0, 0.1),
+    inset 0 0 0 10px #ffd6e8,
+    inset 0 0 0 12px white;
+}
+
+/* Slideshow Container */
+.slideshow-container {
+  position: relative;
+  max-width: 1000px;
+  margin: 0px auto 5px;  /* top, auto (center), bottom */
+  text-align: center;
+}
+
+.mySlides {
+  display: none;
+  text-align: center;
+}
+
+.mySlides img {
+  max-height: 350px;
+  width: auto;
+  max-width: 45%;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Navigation arrows */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 15px;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  border-radius: 50%;
+  background-color: rgba(255,107,157,0.8);
+  transition: all 0.3s ease;
+  user-select: none;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+}
+
+.prev {
+  left: 20px;
+}
+
+.next {
+  right: 20px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(212,77,125,0.9);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.dots-container {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  background-color: #ffb6c1;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.active, .dot:hover {
+  background-color: #ff6b9d;
+}
+
+
+.numbertext {
+  display: none;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+.text {
+  color: #d44d7d;
+  font-size: 35px;
+  font-weight: 600;
+  font-family: 'Dancing Script', cursive;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 5px;
+  padding: 0;
+}
+
+
+/* Content Section: Left Info Boxes & Right Stacked Images */
+#content .content-wrapper {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+#content .info-boxes {
+  flex: 1 1 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+#content .info-box {
+  border: 2px solid #e91e63;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: rgba(233, 30, 99, 0.1);
+  color: #e91e63;
+}
+
+#content .info-box h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: #e91e63;
+}
+
+#content .image-stack {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#content .gallery-image {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(233, 30, 99, 0.3);
+  object-fit: cover;
+}
