@@ -1,26 +1,46 @@
-/* General body styling */
+/* ========================================
+   Root Variables (Colors, Fonts, Sizes)
+======================================== */
+:root {
+  --accent-pink: #e91e63;
+  --light-pink: #ff9ebb;
+  --medium-pink: #ffb6c1;
+  --bright-pink: #ff6b9d;
+  --deep-pink: #d44d7d;
+  --bg-gradient-1: #fff0f5;
+  --bg-gradient-2: #ffd6e8;
+  --bg-gradient-3: #ffc0cb;
+  --font-main: 'Montserrat', cursive;
+  --font-title: 'Dancing Script', cursive;
+}
+
+/* ========================================
+   General Body Styling
+======================================== */
 body {
   padding-top: 120px;
-  background: linear-gradient(-45deg, #fff0f5, #ffd6e8, #ffc0cb, #ffb6c1);
+  background: linear-gradient(-45deg, var(--bg-gradient-1), var(--bg-gradient-2), var(--bg-gradient-3), var(--medium-pink));
   background-size: 400% 400%;
   animation: gradientBG 15s ease infinite;
-  font-family: 'Montserrat', cursive;
+  font-family: var(--font-main);
   font-size: 22px;
   color: #5a2a40;
   margin: 0;
   min-height: 100vh;
 }
 
-/* Background gradient animation */
+/* Gradient animation */
 @keyframes gradientBG {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
-/* Main page title styling */
+/* ========================================
+   Typography
+======================================== */
 h1 {
-  color: #d44d7d;
+  color: var(--deep-pink);
   text-align: center;
   font-weight: 700;
   font-size: 3rem;
@@ -30,83 +50,6 @@ h1 {
   font-style: italic;
 }
 
-/* Fixed navbar styles */
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 30px;
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(8px);
-  border-bottom: 2px dashed #ff9ebb;
-  z-index: 1000;
-}
-
-/* Navbar buttons styling */
-.navbar button {
-  background: #ff6b9d;
-  color: white;
-  border: none;
-  padding: 15px 30px;
-  margin: 0 10px;
-  font-size: 18px;
-  font-family: 'Montserrat', cursive;
-  border-radius: 50px 5px;
-  cursor: pointer;
-  transition: all 0.4s;
-  box-shadow: 0 4px 8px rgba(210, 65, 123, 0.3), inset 0 2px 2px rgba(255,255,255,0.2);
-  position: relative;
-  overflow: hidden;
-}
-
-/* Navbar button hover effect */
-.navbar button:hover {
-  background: #d44d7d;
-  transform: rotate(-3deg) scale(1.05);
-  box-shadow: 0 6px 12px rgba(210, 65, 123, 0.4), inset 0 3px 5px rgba(255,255,255,0.3);
-}
-
-/* Decorative effect behind navbar buttons */
-.navbar button::after {
-  content: "";
-  position: absolute;
-  top: -10px;
-  left: -10px;
-  right: -10px;
-  bottom: -10px;
-  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="%23ffffff22"><circle cx="20" cy="20" r="8"/><circle cx="70" cy="30" r="12"/><circle cx="40" cy="70" r="10"/></svg>');
-  z-index: -1;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-/* Show decorative effect on hover */
-.navbar button:hover::after {
-  opacity: 1;
-}
-
-/* Image styling with hover effect */
-img {
-  max-width: 50%;
-  height: auto;
-  display: block;
-  margin: 40px auto;
-  background: white;
-  padding: 15px 15px 60px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1), 0 0 0 8px #fff, 0 0 0 11px #ff9ebb, 0 0 0 13px #fff;
-  transform: rotate(2deg);
-  transition: transform 0.5s;
-}
-
-img:hover {
-  transform: rotate(-1deg) scale(1.02);
-}
-
-/* Decorative underline for h1 */
 h1::after {
   content: "";
   display: block;
@@ -117,31 +60,95 @@ h1::after {
   background-repeat: no-repeat;
 }
 
-/* Background decorative pattern W3schools */
+/* ========================================
+   Navbar
+======================================== */
+.navbar {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  border-bottom: 2px dashed var(--light-pink);
+  z-index: 1000;
+}
+
+.navbar button {
+  background: var(--bright-pink);
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  margin: 0 10px;
+  font-size: 18px;
+  font-family: var(--font-main);
+  border-radius: 50px 5px;
+  cursor: pointer;
+  transition: all 0.4s;
+  box-shadow: 0 4px 8px rgba(210, 65, 123, 0.3), inset 0 2px 2px rgba(255,255,255,0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.navbar button:hover,
+.navbar button:focus {
+  background: var(--deep-pink);
+  transform: rotate(-3deg) scale(1.05);
+  box-shadow: 0 6px 12px rgba(210, 65, 123, 0.4), inset 0 3px 5px rgba(255,255,255,0.3);
+  outline: none;
+}
+
+.navbar button::after {
+  content: "";
+  position: absolute;
+  top: -10px; left: -10px; right: -10px; bottom: -10px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="%23ffffff22"><circle cx="20" cy="20" r="8"/><circle cx="70" cy="30" r="12"/><circle cx="40" cy="70" r="10"/></svg>');
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.navbar button:hover::after {
+  opacity: 1;
+}
+
+/* ========================================
+   Main Decorative Background
+======================================== */
 body::before {
   content: "";
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  top: 0; left: 0; right: 0; bottom: 0;
   background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="%23ff9ebb22"><path d="M50,30 Q60,20 70,30 Q80,40 50,60 Q20,40 30,30 Q40,20 50,30 Z"/></svg>');
   pointer-events: none;
   z-index: -1;
 }
 
-/* Main gallery container */
-.art-gallery {
-  position: relative;
-  max-width: 800px;
-  margin: 50px auto;
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.8);
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), inset 0 0 0 10px #ffd6e8, inset 0 0 0 12px white;
+/* ========================================
+   Image Styling
+======================================== */
+img {
+  max-width: 50%;
+  height: auto;
+  display: block;
+  margin: 40px auto;
+  background: white;
+  padding: 15px 15px 60px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1), 0 0 0 8px #fff, 0 0 0 11px var(--light-pink), 0 0 0 13px #fff;
+  transform: rotate(2deg);
+  transition: transform 0.5s;
 }
 
-/* Slideshow container styles */
+img:hover {
+  transform: rotate(-1deg) scale(1.02);
+}
+
+/* ========================================
+   Slideshow Styles
+======================================== */
 .slideshow-container {
   position: relative;
   max-width: 1000px;
@@ -149,109 +156,97 @@ body::before {
   text-align: center;
 }
 
-/* Each slide styling */
 .mySlides {
   display: none;
   text-align: center;
 }
 
-/* Images inside slides */
 .mySlides img {
   max-height: 350px;
-  width: auto;
   max-width: 45%;
   border-radius: 8px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
-/* Previous & Next buttons */
 .prev, .next {
   cursor: pointer;
   position: absolute;
   top: 50%;
+  transform: translateY(-50%);
   padding: 15px;
+  background-color: rgba(255,107,157,0.8);
   color: white;
   font-size: 30px;
   font-weight: bold;
   border-radius: 50%;
-  background-color: rgba(255,107,157,0.8);
-  transition: all 0.3s ease;
+  transition: 0.3s ease;
   user-select: none;
-  transform: translateY(-50%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 50px;
   height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.prev { left: 20px; }
-.next { right: 20px; }
-
-/* Hover effect on nav arrows W3schools*/
 .prev:hover, .next:hover {
   background-color: rgba(212,77,125,0.9);
   transform: translateY(-50%) scale(1.1);
 }
 
-/* Container for dots */
+.prev { left: 20px; }
+.next { right: 20px; }
+
 .dots-container {
   text-align: center;
   padding: 20px 0;
 }
 
-/* Each dot */
 .dot {
   cursor: pointer;
   height: 15px;
   width: 15px;
   margin: 0 5px;
-  background-color: #ffb6c1;
+  background-color: var(--medium-pink);
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.3s ease;
 }
 
-/* Active or hovered dot */
 .active, .dot:hover {
-  background-color: #ff6b9d;
+  background-color: var(--bright-pink);
 }
 
-/* Hide numbertext (optional for slide numbering) */
 .numbertext { display: none; }
 
-/* Fade animation for slides */
 .fade {
   animation-name: fade;
   animation-duration: 1.5s;
 }
 
-/* Keyframes for fade effect */
 @keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+  from { opacity: .4; }
+  to { opacity: 1; }
 }
 
-/* Text under slides */
 .text {
-  color: #d44d7d;
+  color: var(--deep-pink);
   font-size: 35px;
   font-weight: 600;
-  font-family: 'Dancing Script', cursive;
+  font-family: var(--font-title);
   text-align: center;
   margin: 0 0 5px;
-  padding: 0;
 }
 
-/* Content section layout */
+/* ========================================
+   Content Section
+======================================== */
 #content .content-wrapper {
   display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
   align-items: flex-start;
-  flex-wrap: wrap;
 }
 
-/* Info boxes styling */
 #content .info-boxes {
   flex: 1 1 40%;
   display: flex;
@@ -260,19 +255,17 @@ body::before {
 }
 
 #content .info-box {
-  border: 2px solid #e91e63;
+  border: 2px solid var(--accent-pink);
+  background-color: rgba(233, 30, 99, 0.1);
   padding: 1rem;
   border-radius: 8px;
-  background-color: rgba(233, 30, 99, 0.1);
-  color: #e91e63;
+  color: var(--accent-pink);
 }
 
 #content .info-box h3 {
   margin: 0 0 0.5rem;
-  color: #e91e63;
 }
 
-/* Images stack */
 #content .image-stack {
   flex: 1 1 50%;
   display: flex;
@@ -283,6 +276,188 @@ body::before {
 #content .gallery-image {
   width: 100%;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(233, 30, 99, 0.3);
   object-fit: cover;
+  box-shadow: 0 0 10px rgba(233, 30, 99, 0.3);
 }
+
+/* ========================================
+   Art Section
+======================================== */
+.content-hidden {
+  display: none;
+  color: var(--accent-pink);
+  font-family: var(--font-main);
+  padding: 2rem;
+}
+
+.content-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.art-block {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 2rem;
+}
+
+.art-description {
+  max-width: 400px;
+  margin-right: 2rem;
+  background-color: var(--bg-gradient-1);
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.art-title {
+  font-weight: bold;
+  margin: 0 0 0.5rem;
+}
+
+.art-description p {
+  margin: 0;
+}
+
+.art-image {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+/* ========================================
+   Watch Section
+======================================== */
+.watch-section {
+  display: none;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 2rem auto;
+  color: var(--accent-pink);
+}
+
+.watch-subtitle {
+  text-align: center;
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.video-frame {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* ========================================
+   Contact Section
+======================================== */
+.contact-section {
+  display: none;
+  padding: 2rem;
+  color: var(--accent-pink);
+  font-family: var(--font-main);
+}
+
+.about-me {
+  background-color: var(--bg-gradient-1);
+  border-left: 4px solid var(--accent-pink);
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+.social-link {
+  margin-right: 1rem;
+  color: var(--accent-pink);
+  text-decoration: none;
+}
+
+.social-link:hover {
+  color: #c2185b;
+}
+
+/* ========================================
+   Responsive Design
+======================================== */
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+
+  .navbar button {
+    margin: 10px 5px;
+    font-size: 16px;
+    padding: 12px 20px;
+  }
+
+  #content .content-wrapper {
+    flex-direction: column;
+  }
+
+  .art-block {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+
+  .art-description {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  img, .mySlides img, .art-image {
+    max-width: 90% !important;
+    height: auto;
+  }
+}
+
+
+/* ========================================
+   Art Gallery Box: 
+======================================== */
+.art-gallery {
+  background: #ffffff;                   
+  border: 4px solid var(--medium-pink);  
+  padding: 1rem 3rem;       /* Reduced vertical padding from 2rem to 1rem */
+  margin: 2rem auto 3rem;                 
+  max-width: 80%;                       
+  min-width: 400px;                    
+  color: var(--accent-pink);              
+  font-family: var(--font-main);         
+  font-size: 22px;                        
+  line-height: 1.6;                      
+  text-align: left;                      
+  border-radius: 1.2rem;                 
+  box-shadow: 
+    0 4px 15px rgba(210, 65, 123, 0.2), 
+    0 0 0 6px #fff;                      
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.art-gallery:hover {
+  transform: scale(1.02);                 
+  box-shadow: 
+    0 10px 30px rgba(210, 65, 123, 0.3), 
+    0 0 0 6px #fff,                      
+    0 0 0 12px var(--medium-pink);      
+}
+
+.art-gallery p {
+  margin-bottom: 1rem;                   
+}
+
