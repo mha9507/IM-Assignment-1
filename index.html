@@ -1,27 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Character encoding declaration -->
   <meta charset="UTF-8">
 
   <!-- Viewport Setting / Responsive Page -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Page title -->
+  <!-- Page title that appears in browser tab -->
   <title>MY ART</title>
 
-  <!-- Link to CSS file -->
+  <!-- Link to external CSS stylesheet -->
   <link rel="stylesheet" href="style.css">
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts imports for typography -->
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Pacifico&family=Amatic+SC&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
-  <!-- Font Awesome -->
+  <!-- Font Awesome for icon library -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 
 <body>
-  <!-- NAVBAR  W3schools-->
+  <!-- NAVBAR - Navigation buttons for different sections -->
   <div class="navbar">
     <button type="button" onclick="showSection('home')">Home</button>
     <button type="button" onclick="showSection('content')">Content</button>
@@ -29,12 +30,13 @@
     <button type="button" onclick="showSection('contact')">Get In Touch</button>
   </div>
 
-  <!-- HOME SECTION -->
+  <!-- HOME SECTION - Main landing area with slideshow -->
   <div id="home">
     <h1>With Every Stroke, A Story</h1>
 
+<!-- Slideshow container for artwork display -->
 <div class="slideshow-container">
-  <!-- SLIDES W3schools-->
+  <!-- SLIDES - Individual artwork slides with images and captions -->
   <div class="mySlides fade">
     <img src="Media/girl.jpg" style="width:100%" alt="Framed in Feeling">
     <div class="text">Framed in Feeling</div>
@@ -100,21 +102,20 @@
     <div class="text">Swing of Solitude</div>
   </div>
 
-  <!-- ARROWS W3schools-->
+  <!-- ARROWS - Navigation controls for slideshow -->
   <div class="arrow-container">
     <a class="prev" onclick="plusSlides(-1)">❮</a>
     <a class="next" onclick="plusSlides(1)">❯</a>
   </div>
 </div>
 
-
+<!-- Dot indicators for slideshow navigation -->
 <div class="dots-container"></div>
-
 
   </div>
 
-<!-- CONTENT SECTION -->
-<div id="content" style="display: none; color: #e91e63; font-family: 'Montserrat', sans-serif; padding: 2rem;">
+<!-- CONTENT SECTION - Art journey and medium descriptions -->
+<div id="content" class="content-hidden">
   <h1>My Art Journey</h1>
   <div class="art-gallery">
     <p>
@@ -128,106 +129,102 @@
     </p>
   </div>
 
-  <div class="content-section" style="display: flex; flex-direction: column;">
-    <!-- Digital Art -->
-    <div style="display: flex; align-items: center; justify-content: flex-end; margin-bottom: 2rem;">
-      <div style="max-width: 400px; margin-right: 2rem; background-color: #fff0f5; padding: 1rem; border-radius: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-        <p style="margin: 0 0 0.5rem 0; font-weight: bold;">Digital Art</p>
-        <p style="margin: 0;">
+  <!-- Art medium showcase sections -->
+  <div class="content-section">
+    <!-- Digital Art section -->
+    <div class="art-block">
+      <div class="art-description">
+        <p class="art-title">Digital Art</p>
+        <p>
           Created using Procreate on iPad with custom brushes, airbrush glow effects, and layered textures. 
           Every stroke is intentional, blending tech precision with raw emotion.
         </p>
       </div>
-      <img src="Media/digital_girl.jpg" style="width: 300px; height: 300px; object-fit: cover; border-radius: 1rem;" alt="Digital portrait">
+      <img src="Media/digital_girl.jpg" class="art-image" alt="Digital portrait">
     </div>
 
-    <!-- Pencil Drawing -->
-    <div style="display: flex; align-items: center; justify-content: flex-end; margin-bottom: 2rem;">
-      <div style="max-width: 400px; margin-right: 2rem; background-color: #fff0f5; padding: 1rem; border-radius: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-        <p style="margin: 0 0 0.5rem 0; font-weight: bold;">Pencil Drawing</p>
-        <p style="margin: 0;">
+    <!-- Pencil Drawing section -->
+    <div class="art-block">
+      <div class="art-description">
+        <p class="art-title">Pencil Drawing</p>
+        <p>
           Sketched with graphite pencils, shaded with smudging tools and fingertips. 
           Light and shadow come alive through delicate lines and textured hatching.
         </p>
       </div>
-      <img src="Media/eyes.jpg" style="width: 300px; height: 300px; object-fit: cover; border-radius: 1rem;" alt="Eyes study">
+      <img src="Media/eyes.jpg" class="art-image" alt="Eyes study">
     </div>
 
-    <!-- Acrylic/Oil Painting -->
-    <div style="display: flex; align-items: center; justify-content: flex-end; margin-bottom: 2rem;">
-      <div style="max-width: 400px; margin-right: 2rem; background-color: #fff0f5; padding: 1rem; border-radius: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-        <p style="margin: 0 0 0.5rem 0; font-weight: bold;">Acrylic & Oil Painting</p>
-        <p style="margin: 0;">
+    <!-- Acrylic/Oil Painting section -->
+    <div class="art-block">
+      <div class="art-description">
+        <p class="art-title">Acrylic & Oil Painting</p>
+        <p>
           Thick brushwork, bold color, layered textures. From palette knife edges to smooth oil blends, 
           this piece breathes with tactile energy and rich expression.
         </p>
       </div>
-      <img src="Media/girl.jpg" style="width: 300px; height: 300px; object-fit: cover; border-radius: 1rem;" alt="Portrait of a girl">
+      <img src="Media/girl.jpg" class="art-image" alt="Portrait of a girl">
     </div>
   </div>
 </div>
 
-
-
-
-
-
-
-<!-- WATCH SECTION -->
-<div id="watch" style="display: none; padding: 2rem; background-color: #f9f9f9; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); max-width: 800px; margin: 2rem auto; color: #e91e63;">
+<!-- WATCH SECTION - Video content area -->
+<div id="watch" class="watch-section">
   <h1>Crafting the Vision</h1>
-  
-  <h3 style="text-align: center; font-size: 1.25rem; margin-bottom: 1.5rem;">Watch the Creation Unfold</h3>
-  
-  <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);">
+
+  <h3 class="watch-subtitle">Watch the Creation Unfold</h3>
+
+  <!-- Embedded video container -->
+  <div class="video-container">
     <iframe 
       src="https://drive.google.com/file/d/1fxhuhEuR41zufX-EBCbeGmqkpDEmofyi/preview" 
       allow="autoplay"
-      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
-      allowfullscreen>
+      allowfullscreen
+      class="video-frame">
     </iframe>
   </div>
 </div>
 
+<!-- CONTACT SECTION - Personal information and social links -->
+<div id="contact" class="contact-section">
 
-
-<!-- CONTACT SECTION -->
-<div id="contact" style="display: none; padding: 2rem; color: #e91e63; font-family: 'Montserrat', sans-serif;">
-
-  <!-- About Me Box -->
-  <div class="about-me" style="background-color: #fff0f5; border-left: 4px solid #e91e63; padding: 1rem; margin-bottom: 2rem;">
+  <!-- About Me Box - Personal introduction -->
+  <div class="about-me">
     <h2>About Me</h2>
-    <p>I am <strong>Meera Alzaabi</strong>, a Computer Science major and Math minor, currently in my third year at NYU Abu Dhabi. 
-    I blend analytical thinking with creative expression through my art and code.</p>
+    <p>
+      I am <strong>Meera Alzaabi</strong>, a Computer Science major and Math minor, currently in my third year at NYU Abu Dhabi. 
+      I blend analytical thinking with creative expression through my art and code.
+    </p>
   </div>
 
-  <!-- Social Media Links -->
+  <!-- Social Media Links - Connection options -->
   <div class="social-media">
     <h3>Get in Touch</h3>
     <p>Follow me on social media or send me an email:</p>
-    
-    <!-- Facebook -->
-    <a href="https://www.facebook.com/people/Meera-Alz/pfbid0jinN9eGjCyRyFxhU7cvLtYffNKi7GGUeAY6QRPR4C6jUPydfEeJ13dpQvP6wnGL2l/?mibextid=wwXIfr&rdid=yxPepxyJEt41U3oC&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F19Qfcxqhnv%2F%3Fmibextid%3DwwXIfr"
-       target="_blank" style="margin-right: 1rem; color: #e91e63;">
+
+    <!-- Facebook link with icon -->
+    <a href="https://www.facebook.com/people/Meera-Alz/..." 
+       target="_blank" class="social-link">
       <i class="fab fa-facebook fa-2x"></i>
     </a>
 
-    <!-- Instagram -->
-    <a href="https://www.instagram.com/mhz_398/?igsh=ZmhueW00cTJzOW9j&utm_source=qr" 
-       target="_blank" style="margin-right: 1rem; color: #e91e63;">
+    <!-- Instagram link with icon -->
+    <a href="https://www.instagram.com/mhz_398/..." 
+       target="_blank" class="social-link">
       <i class="fab fa-instagram fa-2x"></i>
     </a>
 
-    <!-- Email -->
+    <!-- Email link with icon -->
     <a href="mailto:mha9507@nyu.edu?subject=Hello%20Meera&body=Hi%20Meera,%0D%0A%0D%0A" 
-       style="color: #e91e63;" title="Send Me an Email">
+       class="social-link" title="Send Me an Email">
       <i class="fas fa-envelope fa-2x"></i>
     </a>
   </div>
 
 </div>
 
-  <!-- Link to external JavaScript -->
+  <!-- Link to external JavaScript file for functionality -->
   <script src="script.js"></script>
 </body>
 </html>
