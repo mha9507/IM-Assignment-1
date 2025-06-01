@@ -80,3 +80,4 @@ document.addEventListener("DOMContentLoaded", () => {
   initDots();
   showSlides(slideIndex);
 });
+
