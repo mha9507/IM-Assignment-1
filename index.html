@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <!-- Viewport Setting / Responsive Page -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Page title -->
+  <title>MY ART</title>
+
+  <!-- Link to CSS file -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Pacifico&family=Amatic+SC&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+  <!-- NAVBAR  W3schools-->
+  <div class="navbar">
+    <button type="button" onclick="showSection('home')">Home</button>
+    <button type="button" onclick="showSection('content')">Content</button>
+    <button type="button" onclick="showSection('watch')">Watch</button>
+    <button type="button" onclick="showSection('contact')">Get In Touch</button>
+  </div>
+
+  <!-- HOME SECTION -->
+  <div id="home">
+    <h1>With Every Stroke, A Story</h1>
+
+<div class="slideshow-container">
+  <!-- SLIDES W3schools-->
+  <div class="mySlides fade">
+    <img src="Media/girl.jpg" style="width:100%" alt="Framed in Feeling">
+    <div class="text">Framed in Feeling</div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="Media/Flower.jpg" style="width:100%" alt="Bloom Within">
+    <div class="text">Bloom Within (In-Progress)</div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="Media/Wolf.jpg" style="width:100%" alt="Peace in Stillness">
+    <div class="text">Peace in Stillness</div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="Media/clock.jpg" style="width:100%" alt="Time Slips">
+    <div class="text">Time Slips</div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="Media/candle.jpg" style="width:100%" alt="Wax and Flame">
+    <div class="text">Wax and Flame</div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="Media/cat.jpg" style="width:100%" alt="Curious Pause">
+    <div class="text">Curious Pause</div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="Media/heart.jpg" style="width:100%" alt="Pulse of Bloom">
+    <div class="text">Pulse of Bloom</div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="Media/mix.jpg" style="width:100%" alt="Inner Currents">
+    <div class="text">Inner Currents</div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="Media/eyes.jpg" style="width:100%" alt="Double Vision">
+    <div class="text">Double Vision</div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="Media/digital_girl.jpg" style="width:100%" alt="Stargaze Before Dawn">
+    <div class="text">Stargaze Before Dawn</div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="Media/digital_boy.jpg" style="width:100%" alt="Whispers of Wild">
+    <div class="text">Whispers of Wild</div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="Media/nature.jpg" style="width:100%" alt="Twilight Fest">
+    <div class="text">Twilight Fest</div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="Media/swing.jpg" style="width:100%" alt="Swing of Solitude">
+    <div class="text">Swing of Solitude</div>
+  </div>
+
+  <!-- ARROWS W3schools-->
+  <div class="arrow-container">
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+  </div>
+</div>
+
+
+<div class="dots-container"></div>
+
+
+  </div>
+
+<!-- CONTENT SECTION -->
+<div id="content" style="display: none; color: #e91e63; font-family: 'Montserrat', sans-serif; padding: 2rem;">
+  <h1>My Art Journey</h1>
+  <div class="art-gallery">
+    <p>
+      Every piece I create is a visual diary — a blend of emotion, memory, and imagination. 
+      My art is not just about what you see, but what you feel.
+    </p>
+    <p>
+      Each stroke, color, and shadow is chosen with purpose — sometimes bold and direct, 
+      other times subtle and introspective. Through my work, I explore transformation, 
+      identity, time, and nature. Here are some of the mediums I've explored:
+    </p>
+  </div>
+
+  <div class="content-section" style="display: flex; flex-direction: column;">
+    <!-- Digital Art -->
+    <div style="display: flex; align-items: center; justify-content: flex-end; margin-bottom: 2rem;">
+      <div style="max-width: 400px; margin-right: 2rem; background-color: #fff0f5; padding: 1rem; border-radius: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+        <p style="margin: 0 0 0.5rem 0; font-weight: bold;">Digital Art</p>
+        <p style="margin: 0;">
+          Created using Procreate on iPad with custom brushes, airbrush glow effects, and layered textures. 
+          Every stroke is intentional, blending tech precision with raw emotion.
+        </p>
+      </div>
+      <img src="Media/digital_girl.jpg" style="width: 300px; height: 300px; object-fit: cover; border-radius: 1rem;" alt="Digital portrait">
+    </div>
+
+    <!-- Pencil Drawing -->
+    <div style="display: flex; align-items: center; justify-content: flex-end; margin-bottom: 2rem;">
+      <div style="max-width: 400px; margin-right: 2rem; background-color: #fff0f5; padding: 1rem; border-radius: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+        <p style="margin: 0 0 0.5rem 0; font-weight: bold;">Pencil Drawing</p>
+        <p style="margin: 0;">
+          Sketched with graphite pencils, shaded with smudging tools and fingertips. 
+          Light and shadow come alive through delicate lines and textured hatching.
+        </p>
+      </div>
+      <img src="Media/eyes.jpg" style="width: 300px; height: 300px; object-fit: cover; border-radius: 1rem;" alt="Eyes study">
+    </div>
+
+    <!-- Acrylic/Oil Painting -->
+    <div style="display: flex; align-items: center; justify-content: flex-end; margin-bottom: 2rem;">
+      <div style="max-width: 400px; margin-right: 2rem; background-color: #fff0f5; padding: 1rem; border-radius: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+        <p style="margin: 0 0 0.5rem 0; font-weight: bold;">Acrylic & Oil Painting</p>
+        <p style="margin: 0;">
+          Thick brushwork, bold color, layered textures. From palette knife edges to smooth oil blends, 
+          this piece breathes with tactile energy and rich expression.
+        </p>
+      </div>
+      <img src="Media/girl.jpg" style="width: 300px; height: 300px; object-fit: cover; border-radius: 1rem;" alt="Portrait of a girl">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+<!-- WATCH SECTION -->
+<div id="watch" style="display: none; padding: 2rem; background-color: #f9f9f9; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); max-width: 800px; margin: 2rem auto; color: #e91e63;">
+  <h1>Crafting the Vision</h1>
+  
+  <h3 style="text-align: center; font-size: 1.25rem; margin-bottom: 1.5rem;">Watch the Creation Unfold</h3>
+  
+  <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);">
+    <iframe 
+      src="https://drive.google.com/file/d/1fxhuhEuR41zufX-EBCbeGmqkpDEmofyi/preview" 
+      allow="autoplay"
+      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
+      allowfullscreen>
+    </iframe>
+  </div>
+</div>
+
+
+
+<!-- CONTACT SECTION -->
+<div id="contact" style="display: none; padding: 2rem; color: #e91e63; font-family: 'Montserrat', sans-serif;">
+
+  <!-- About Me Box -->
+  <div class="about-me" style="background-color: #fff0f5; border-left: 4px solid #e91e63; padding: 1rem; margin-bottom: 2rem;">
+    <h2>About Me</h2>
+    <p>I am <strong>Meera Alzaabi</strong>, a Computer Science major and Math minor, currently in my third year at NYU Abu Dhabi. 
+    I blend analytical thinking with creative expression through my art and code.</p>
+  </div>
+
+  <!-- Social Media Links -->
+  <div class="social-media">
+    <h3>Get in Touch</h3>
+    <p>Follow me on social media or send me an email:</p>
+    
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/people/Meera-Alz/pfbid0jinN9eGjCyRyFxhU7cvLtYffNKi7GGUeAY6QRPR4C6jUPydfEeJ13dpQvP6wnGL2l/?mibextid=wwXIfr&rdid=yxPepxyJEt41U3oC&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F19Qfcxqhnv%2F%3Fmibextid%3DwwXIfr"
+       target="_blank" style="margin-right: 1rem; color: #e91e63;">
+      <i class="fab fa-facebook fa-2x"></i>
+    </a>
+
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/mhz_398/?igsh=ZmhueW00cTJzOW9j&utm_source=qr" 
+       target="_blank" style="margin-right: 1rem; color: #e91e63;">
+      <i class="fab fa-instagram fa-2x"></i>
+    </a>
+
+    <!-- Email -->
+    <a href="mailto:mha9507@nyu.edu?subject=Hello%20Meera&body=Hi%20Meera,%0D%0A%0D%0A" 
+       style="color: #e91e63;" title="Send Me an Email">
+      <i class="fas fa-envelope fa-2x"></i>
+    </a>
+  </div>
+
+</div>
+
+  <!-- Link to external JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
